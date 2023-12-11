@@ -1,29 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import Loading from "@/components/Loading";
+import Form from '@/components/Form'
+import Header from '@/components/Header'
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      // Fetch your data here
-
-
-      setTimeout(() => {
-        setLoading(false);
-      }, 400);
-    };
-
-    fetchData();
-  }, []);
 
   return (
-    <main>      
-      {loading ? (
-        <Loading />
-      ) : (
-        <Loading/>
-      )} 
+    <main>   
+      <Header/>   
+      <Form/>
     </main>
   )
 }

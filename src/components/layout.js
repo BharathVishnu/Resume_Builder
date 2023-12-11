@@ -7,13 +7,15 @@ import Head from "next/head";
 //   });
 
 export default function Layout({children}) {
-
+    const gradientStyle = {
+        backgroundImage: 'linear-gradient(to right,#000000,#434343)',
+      };
     return(
     <>
         <Head>
-            <title>NextJS Tailwind Starter</title>
+            <title>Resume Builder</title>
         </Head>
-        <div className={`bg-white flex flex-col min-h-screen`}>
+        <div className={`bg-gray-500 flex flex-col min-h-screen`} style={gradientStyle}>
             <main className="flex-auto min-h-screen">{children}</main>
         </div>
     </>
